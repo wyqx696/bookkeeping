@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>投资记录</title>
+	<link rel="stylesheet" type="text/css" href="./css/page-1.css">
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.mobile.min.js"></script>
+	<script type="text/javascript" src="./js/pagel.js"></script>
+	<script type="text/javascript" src="./js/autoheight.js"></script>
+	<script type="text/javascript" src="./js/showdate.js"></script>
+	<script type="text/javascript" src="./js/showdetail.js"></script>
+	<script type="text/javascript" src="./js/showpercent.js"></script>
+	<script type="text/javascript" src="./js/percent.js"></script>
+	<script type="text/javascript" src="./js/addDB.js"></script>
+	<script type="text/javascript" src="./js/adddata.js"></script>
+    <script type="text/javascript" src="./js/alldata.js"></script>
+</head>
+<body>
+	<h2 class="header" id="header">新建投资记录</h2>
+	
+	<div class="page" id="page">
+		<div class="page-list page-1" id="page-1">
+			<div class="new" id="new">
+				<h3 class="title" id="title">投资组合</h3>
+				<p>
+					<select name="trade_id" id="trade_id">
+						<option value ="CSI666">螺丝钉指数基金组合</option>
+					</select>
+				</p>
+				<p>
+					<select name="trade_time" id="trade_time" onblur="showdetail(this.value)"></select>
+				</p>
+			</div>
+			<div class="detail" id="detail"></div>
+			<div class="add" id="add">
+				<h3 class="title" id="title">我的投资记录</h3>
+				<p>
+					<input type="date" name="date" id="date" value="" placeholder="日期" />
+				</p>
+				<p>
+					<input type="number" name="money" id="money" value="" placeholder="请输入购买金额" oninput="percent(this.value)"/>
+				</p>
+				<p>
+					<select name="percent" id="percent" onblur="percent(this.value)">
+						<option value ="主理人比例">主理人比例</option>
+					</select>
+				</p>
+				<div id='record'></div>
+			</div>
+			<div class="adddata" id="adddata" onclick="adddata()">添加投资记录</div>
+		</div>
+		<div class="page-list page-2" id="page-2">
+			<div id="alldata"></div>
+		</div>
+	</div>
+	
+	
+	<!-- 底部导航 -->
+	<div class="nav">
+		<div class="navbar" id="navbar-1" onclick="page(this.title)" title="1">
+			<img class="navimg" src="./img/add.png" alt="">
+			<p class="navtitle" id="old">添加</p>
+		</div>
+		<div class="navbar" id="navbar-2" onclick="page(this.title)" title="2">
+			<img class="navimg" src="./img/qb.png" alt="添加">
+			<p class="navtitle" id="new">全部投资记录</p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+    	
+	document.addEventListener('plusready', function(){
+		//全面屏标题
+		plus.navigator.setStatusBarBackground('#009999');
+		
+		//加载默认投资组合投资时间
+		showdate();
+		
+		alldata(); 
+	});
+	//自动获取高度
+	autoheight();
+	
+	//屏幕手势滑动，切换页面
+	$("#page").on("swipeleft",moveleft);
+	$("#page").on("swiperight",moveright);
+</script>
+</html>

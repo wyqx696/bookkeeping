@@ -1,0 +1,252 @@
+.ui-loader{
+	display: none;
+}
+*{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+}
+html{
+	height: 100%;
+}
+body{
+	background: #6CC;
+}
+.header{
+	position: fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	padding-top:25px;
+	padding-bottom:10px; 
+	text-align: center;
+	border-bottom:solid 1px #266;
+	background-color: #099;
+	color:#FFF;
+	z-index: 999;
+}
+.title{
+	padding-top:25px;
+	padding-bottom:15px;
+	text-align: center;
+}
+#trade_time-button>span,#trade_id-button>span{
+	display: none;
+}
+.new p select{
+	margin:5px auto;
+	height:60px;
+	line-height:60px;
+	width:100%;
+	background-color: rgba(255,255,255,0.4);
+	color:#000;
+	text-indent:10px;
+	border: none;
+	outline: none;
+	font-size:1.1em;
+	text-align: center !important;
+	text-align-last: center;
+}
+.detail p{
+	padding:0px 25px;
+	min-height: 60px;
+	background-color: rgba(255,255,255,0.4);
+	margin:5px auto;
+}
+.buy_amount{
+	line-height: 60px;
+}
+.remark{
+	padding:15px 0px;
+}
+.detail table{
+	margin:5px auto;
+	width:100%;
+	background-color: rgba(255,255,255,0.4);
+}
+.detail table tbody tr td{
+	text-align: center;
+}
+.add p input{
+	margin:5px auto;
+	height:60px;
+	line-height:60px;
+	width:100%;
+	border: none;
+	background-color: rgba(255,255,255,0.4); 
+	color:#000;
+	outline: none;
+	box-sizing: border-box;
+	text-align: center;
+	font-size:1.1em;
+}
+#percent-button>span{
+	display: none;
+}
+.add p select{
+	margin:5px auto;
+	height:60px;
+	line-height:60px;
+	width:100%;
+	background-color: rgba(255,255,255,0.4);
+	color:#000;
+	text-indent:10px;
+	border: none;
+	outline: none;
+	font-size:1.1em;
+	text-align: center !important;
+	text-align-last: center;
+}
+.add table{
+	margin:5px auto;
+	width:100%;
+	background-color: rgba(255,255,255,0.4);
+}
+.add table tbody tr td{
+	text-align: center;
+	height:60px;
+	/* border:solid 1px #FFF; */
+}
+.add table tbody tr td input{
+	height:100%;
+	line-height:100%;
+	width:95%;
+	border:none;
+	/* border-top: solid 1px #FFF;
+	border-bottom: solid 1px #FFF; */
+	background-color: rgba(255,255,255,0);
+	color:#000;
+	outline: none;
+	box-sizing: border-box;
+	text-align: center;
+	font-size:1.1em;
+}
+.adddata{
+	display:block;
+	margin:15px auto;
+	border:solid 1px #FFF;
+	color:#000;
+	background:rgba(255,255,255,0.4);
+	text-align: center;
+	height:50px;
+	line-height:50px;
+	width:200px;
+	cursor: pointer;
+	border-radius:20px;
+}
+#alldata p span{
+	display: block;
+	margin: 10px auto;
+	height:50px;
+	line-height:50px;
+	border-radius:5px;
+	width:100%;
+	border:none;
+	background-color:rgba(255,255,255,0.4);
+	text-align: left;
+	text-indent: 2.2em;
+	color:#000;
+	outline: none;
+}
+.nav{
+	position: fixed;
+	width:100%;
+	left:0px;
+	bottom:0px;
+	height:60px;
+	display: flex;
+}
+.navbar{
+	padding-top:10px;
+	height: 50px;
+	background:#099;
+	flex-grow: 2;
+}
+#navbar-1{
+	border-top:2px solid #FFF;
+}
+.navimg{
+	display: block;
+	margin: 0px auto;
+	height:15px;
+	width:15px;
+}
+.navtitle{
+	display: block;
+	margin: 0px auto;
+	height:35px;
+	width:100%;
+	line-height: 35px;
+	text-align: center;
+	color:#FFF;
+}
+.page{
+	position: relative;
+	width:100%;
+	overflow-x: hidden;
+	touch-action:pan-y;
+}
+.page-1{
+	margin:75px auto;
+	width:100%;
+	position: absolute;
+	left:0px;
+	top:0px;
+}
+.page-2{
+	margin:80px auto;
+	width:100%;
+	position: absolute;
+	left:100%;
+	top:0px;
+}
+/* 
+.list{
+	display: block;
+	margin:10px auto;
+	height:60px;
+	line-height:60px;
+	width:100%;
+	border-bottom:2px solid #FFF;
+	background-color: rgba(255,255,255,0.4); 
+	color:#000;
+	outline: none;
+	box-sizing: border-box;
+	text-align: center;
+	font-size:1.1em;
+} */
+/* .all-list{
+	display: block;
+	margin-top:5px;
+	height:50px;
+	line-height:50px;
+	width:100%;
+	border:none;
+	background-color: rgba(255,255,255,0.4);
+	color:#000;
+	outline: none;
+	text-align:center;
+	font-size: 1.1em;
+} */
+/* #download,#updatefile{
+	display: block;
+	margin-top:5px;
+	height:50px;
+	line-height:50px;
+	width:100%;
+	border:none;
+	background-color: rgba(255,102,102,1);
+	color:#000;
+	outline: none;
+	text-align:center;
+	font-size: 1.1em;
+} */
+/* 
+.page-3{
+	margin:80px auto;
+	width:100%;
+	position: absolute;
+	left:200%;
+	top:0px;
+}
+ */
