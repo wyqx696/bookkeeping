@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -16,8 +17,15 @@
 	<script type="text/javascript" src="./js/addDB.js"></script>
 	<script type="text/javascript" src="./js/adddata.js"></script>
     <script type="text/javascript" src="./js/alldata.js"></script>
+	<script type="text/javascript" src="./js/fundsDB.js"></script>
+	<script type="text/javascript" src="./js/addFundsData.js"></script>
+	<script type="text/javascript" src="./js/allFundsData.js"></script>
+	<script type="text/javascript" src="./js/template-web.js"></script>
+	<script type="text/javascript" src="./js/showFundData.js"></script>
+
 </head>
-<body>
+
+<body onload="showFundData()">
 	<h2 class="header" id="header">新建投资记录</h2>
 	
 	<div class="page" id="page">
@@ -27,13 +35,17 @@
 				<p>
 					<select name="trade_id" id="trade_id">
 						<option value ="CSI666">螺丝钉指数基金组合</option>
+						<option value ="CSI1009">小鳄鱼配置组合</option>
+
 					</select>
 				</p>
 				<p>
 					<select name="trade_time" id="trade_time" onblur="showdetail(this.value)"></select>
 				</p>
 			</div>
+			
 			<div class="detail" id="detail"></div>
+			
 			<div class="add" id="add">
 				<h3 class="title" id="title">我的投资记录</h3>
 				<p>
@@ -49,11 +61,18 @@
 				</p>
 				<div id='record'></div>
 			</div>
+			
 			<div class="adddata" id="adddata" onclick="adddata()">添加投资记录</div>
+			<div class="addFundsData" id="addFundsData" onclick="addFundsData()">添加资产</div>
 		</div>
+		
 		<div class="page-list page-2" id="page-2">
 			<div id="alldata"></div>
+			<div id="tbd">
+				
+			</div>
 		</div>
+		
 	</div>
 	
 	
@@ -69,6 +88,43 @@
 		</div>
 	</div>
 </body>
+
+<script id="tempProperty" type="text/html">
+   <table id="propertyTable">
+	   <thead>
+		   <tr>
+			   <th>{{combination}}</th>
+			   <th>总金额：{{Sum}}</th>
+		   </tr>
+	   </thead>
+	   <tbody>
+		{{each list as value }}
+			<tr>
+				<td>
+					<span class="fundName" id="fundCode">{{value.fundName}}</span>
+
+				</td>
+				<td>
+					<span class="money" id='fundAcount'>{{value.Account}}</span>
+				</td>
+			</tr>
+		{{/each}}	
+	   </tbody>		
+
+   </table>
+
+</script>
+
+<script type="text/javascript">
+	document.getElementById("trade_id").addEventListener("change",function(){
+		var mySelect = document.getElementById("trade_id");
+		var index=mySelect.selectedIndex ;
+		showdate(plan_code=mySelect.options[index].value);
+		// console.log(plan_code=mySelect.options[index].value)
+	})
+</script>
+
+
 <script type="text/javascript">
     	
 	document.addEventListener('plusready', function(){

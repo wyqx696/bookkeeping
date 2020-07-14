@@ -2,12 +2,12 @@ function showdate(plan_code="CSI666"){
 	var url="https://danjuanapp.com/djapi/plan/"+plan_code+"/trade_history?size=20&page=1"
 	//创建下载任务
 	plus.io.resolveLocalFileSystemURL('_downloads/trade_history', function(entry) {
-	    entry.remove(function(entry) {
-	        console.log("文件删除成功==" + '_downloads/trade_history');
-	    }, function(e) {
-	        console.log("文件删除失败=" + '_downloads/trade_history');
-	    });
-	});	
+		entry.remove(function(entry) {
+			console.log("文件删除成功==" + '_downloads/trade_history');
+		}, function(e) {
+			console.log("文件删除失败=" + '_downloads/trade_history');
+		});
+	});
 	var dtask=plus.downloader.createDownload(url,{},function(d,status){
 	if(status == 200){ 
 		//文件下载成功
