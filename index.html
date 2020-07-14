@@ -68,9 +68,11 @@
 		
 		<div class="page-list page-2" id="page-2">
 			<div id="alldata"></div>
-			<div id="tbd">
-				
-			</div>
+		</div>
+		
+		
+		<div class="page-list page-3" id="page-3">
+			<div id="tbd"></div>
 		</div>
 		
 	</div>
@@ -84,9 +86,14 @@
 		</div>
 		<div class="navbar" id="navbar-2" onclick="page(this.title)" title="2">
 			<img class="navimg" src="./img/qb.png" alt="添加">
-			<p class="navtitle" id="new">全部投资记录</p>
+			<p class="navtitle" id="new">记录</p>
+		</div>
+		<div class="navbar" id="navbar-3" onclick="page(this.title)" title="3">
+			<img class="navimg" src="./img/qb.png" alt="基金资产">
+			<p class="navtitle" id="new">基金资产</p>
 		</div>
 	</div>
+	
 </body>
 
 <script id="tempProperty" type="text/html">
@@ -120,7 +127,7 @@
 		var mySelect = document.getElementById("trade_id");
 		var index=mySelect.selectedIndex ;
 		showdate(plan_code=mySelect.options[index].value);
-		// console.log(plan_code=mySelect.options[index].value)
+
 	})
 </script>
 
@@ -140,7 +147,7 @@
 	autoheight();
 	
 	//屏幕手势滑动，切换页面
-	$("#page").on("swipeleft",moveleft);
-	$("#page").on("swiperight",moveright);
+	// $("#page").on("swipeleft",moveleft);
+	// $("#page").on("swiperight",moveright);
 </script>
 </html>
