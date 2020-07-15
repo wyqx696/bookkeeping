@@ -13,8 +13,12 @@ function page(page){
 		$("#page-2").animate({
 			left:"100%"
 		}, 500);
+		$("#page-3").animate({
+			left:"200%"
+		}, 500);
 		$("#navbar-1").css({ "border-top":"2px solid #FFF"});
 		$("#navbar-2").css({ "border-top":"none"});
+		$("#navbar-3").css({ "border-top":"none"});
 		$("#header").html("新建投资记录");
 	}
 	if(page==2){
@@ -24,12 +28,34 @@ function page(page){
 		$("#page-1").animate({   
 			left:"-100%"
 		}, 500);
+		$("#page-3").animate({
+			left:"100%"
+		}, 500);
 		$("#page-2").animate({
 			left:"0px"
 		}, 500);
 		$("#navbar-1").css({ "border-top":"none"});
 		$("#navbar-2").css({ "border-top":"2px solid #FFF"});
+		$("#navbar-3").css({ "border-top":"none"});
 		$("#header").html("全部投资记录");
+	}
+	if(page==3){
+		//加载要添加数据
+		// detailone();
+		
+		$("#page-1").animate({   
+			left:"-200%"
+		}, 500);
+		$("#page-2").animate({
+			left:"-100%"
+		}, 500);
+		$("#page-3").animate({
+			left:"0px"
+		}, 500);
+		$("#navbar-1").css({ "border-top":"none"});
+		$("#navbar-2").css({ "border-top":"none"});
+		$("#navbar-3").css({ "border-top":"2px solid #FFF"});
+		$("#header").html("全部基金组合");
 	}
 }
 

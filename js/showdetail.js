@@ -32,7 +32,8 @@ function showdetail(date){
 						addhtml+="<tr><td>基金</td><td>买入金额</td><td>配比</td></tr>";
 						for(var n in trading_elements){
 							addhtml+="<tr>";
-							addhtml+="<td><span class='fd_name' id='fd_name-"+n+"'>"+trading_elements[n].fd_name+"</span></td>";
+							addhtml+="<td><span class='fd_name' id='fd_name-"+n+"'>"+trading_elements[n].fd_name+"</span><br><span class='fd_code' id='fd_code-"+n+"'>"+trading_elements[n].fd_code+"</span></td>";
+							
 							addhtml+="<td><input type='number' name='money-"+n+"' id='money-"+n+"' placeholder='"+trading_elements[n].money+"'/></td>";
 							addhtml+="<td id='percent-"+n+"'>"+trading_elements[n].percent+"</td>";
 							addhtml+="</tr>";
