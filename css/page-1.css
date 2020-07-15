@@ -64,7 +64,14 @@ body{
 	width:100%;
 	background-color: rgba(255,255,255,0.4);
 }
-.detail table tbody tr td{
+#propertyTable{
+	margin:5px auto;
+	width:100%;
+	background-color: rgba(255,255,255,0.4);
+	text-align: center;
+}
+
+#propertyTable table tbody tr td{
 	text-align: center;
 }
 .add p input{
@@ -122,6 +129,19 @@ body{
 	font-size:1.1em;
 }
 .adddata{
+	display:block;
+	margin:15px auto;
+	border:solid 1px #FFF;
+	color:#000;
+	background:rgba(255,255,255,0.4);
+	text-align: center;
+	height:50px;
+	line-height:50px;
+	width:200px;
+	cursor: pointer;
+	border-radius:20px;
+}
+.addFundsData{
 	display:block;
 	margin:15px auto;
 	border:solid 1px #FFF;
@@ -198,6 +218,13 @@ body{
 	width:100%;
 	position: absolute;
 	left:100%;
+	top:0px;
+}
+.page-3{
+	margin:80px auto;
+	width:100%;
+	position: absolute;
+	left:200%;
 	top:0px;
 }
 /* 
